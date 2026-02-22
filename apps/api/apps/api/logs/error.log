@@ -1,0 +1,99 @@
+2026-02-12 22:34:45:3445 [31merror[39m: [31m[Error] [39m
+[31mInvalid `prisma.company.findUnique()` invocation in[39m
+[31mC:\Users\Vivek Kumar\Documents\Inventory software\apps\api\src\modules\auth\auth.service.ts:16:54[39m
+
+[31m  13     .replace(/[^a-z0-9]+/g, '-')[39m
+[31m  14     .replace(/(^-|-$)/g, '');[39m
+[31m  15 [39m
+[31m→ 16 const existingCompany = await prisma.company.findUnique([39m
+[31mAuthentication failed against database server, the provided database credentials for `postgres` are not valid.[39m
+
+[31mPlease make sure to provide valid database credentials for the database server at the configured address.[39m 
+2026-02-13 15:00:00:00 [31merror[39m: [31m[Error] [39m
+[31mInvalid `prisma.company.findUnique()` invocation in[39m
+[31mC:\Users\Vivek Kumar\Documents\Inventory software\apps\api\src\modules\auth\auth.service.ts:63:46[39m
+
+[31m  60 }[39m
+[31m  61 [39m
+[31m  62 async login(input: LoginInput) {[39m
+[31m→ 63     const company = await prisma.company.findUnique([39m
+[31mCan't reach database server at `localhost:5432`[39m
+
+[31mPlease make sure your database server is running at `localhost:5432`.[39m 
+2026-02-13 15:13:12:1312 [31merror[39m: [31m[Error] [39m
+[31mInvalid `prisma.company.findUnique()` invocation in[39m
+[31mC:\Users\Vivek Kumar\Documents\Inventory software\apps\api\src\modules\auth\auth.service.ts:63:46[39m
+
+[31m  60 }[39m
+[31m  61 [39m
+[31m  62 async login(input: LoginInput) {[39m
+[31m→ 63     const company = await prisma.company.findUnique([39m
+[31mAuthentication failed against database server, the provided database credentials for `postgres` are not valid.[39m
+
+[31mPlease make sure to provide valid database credentials for the database server at the configured address.[39m 
+2026-02-13 15:13:19:1319 [31merror[39m: [31m[Error] [39m
+[31mInvalid `prisma.company.findUnique()` invocation in[39m
+[31mC:\Users\Vivek Kumar\Documents\Inventory software\apps\api\src\modules\auth\auth.service.ts:63:46[39m
+
+[31m  60 }[39m
+[31m  61 [39m
+[31m  62 async login(input: LoginInput) {[39m
+[31m→ 63     const company = await prisma.company.findUnique([39m
+[31mAuthentication failed against database server, the provided database credentials for `postgres` are not valid.[39m
+
+[31mPlease make sure to provide valid database credentials for the database server at the configured address.[39m 
+2026-02-13 15:13:20:1320 [31merror[39m: [31m[Error] [39m
+[31mInvalid `prisma.company.findUnique()` invocation in[39m
+[31mC:\Users\Vivek Kumar\Documents\Inventory software\apps\api\src\modules\auth\auth.service.ts:63:46[39m
+
+[31m  60 }[39m
+[31m  61 [39m
+[31m  62 async login(input: LoginInput) {[39m
+[31m→ 63     const company = await prisma.company.findUnique([39m
+[31mAuthentication failed against database server, the provided database credentials for `postgres` are not valid.[39m
+
+[31mPlease make sure to provide valid database credentials for the database server at the configured address.[39m 
+2026-02-13 15:13:21:1321 [31merror[39m: [31m[Error] [39m
+[31mInvalid `prisma.company.findUnique()` invocation in[39m
+[31mC:\Users\Vivek Kumar\Documents\Inventory software\apps\api\src\modules\auth\auth.service.ts:63:46[39m
+
+[31m  60 }[39m
+[31m  61 [39m
+[31m  62 async login(input: LoginInput) {[39m
+[31m→ 63     const company = await prisma.company.findUnique([39m
+[31mAuthentication failed against database server, the provided database credentials for `postgres` are not valid.[39m
+
+[31mPlease make sure to provide valid database credentials for the database server at the configured address.[39m 
+2026-02-14 00:47:25:4725 [31merror[39m: [31m[Error] [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Users\Vivek Kumar\Documents\Inventory software\apps\api\src\modules\auth\auth.service.ts:86:45[39m
+
+[31m  83     });[39m
+[31m  84 } else {[39m
+[31m  85     // Login by email only[39m
+[31m→ 86     const users = await prisma.user.findMany([39m
+[31mCan't reach database server at `localhost:5432`[39m
+
+[31mPlease make sure your database server is running at `localhost:5432`.[39m 
+2026-02-15 12:11:14:1114 [31merror[39m: [31m[Error] [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Users\Vivek Kumar\Documents\Inventory software\apps\api\src\modules\auth\auth.service.ts:86:45[39m
+
+[31m  83     });[39m
+[31m  84 } else {[39m
+[31m  85     // Login by email only[39m
+[31m→ 86     const users = await prisma.user.findMany([39m
+[31mAuthentication failed against database server, the provided database credentials for `postgres` are not valid.[39m
+
+[31mPlease make sure to provide valid database credentials for the database server at the configured address.[39m 
+2026-02-22 10:38:37:3837 [31merror[39m: [31m[Error] [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Users\uttim\Downloads\Inventory software\apps\api\src\modules\auth\auth.service.ts:86:45[39m
+
+[31m  83     });[39m
+[31m  84 } else {[39m
+[31m  85     // Login by email only[39m
+[31m→ 86     const users = await prisma.user.findMany([39m
+[31mCan't reach database server at `127.0.0.1:5434`[39m
+
+[31mPlease make sure your database server is running at `127.0.0.1:5434`.[39m 

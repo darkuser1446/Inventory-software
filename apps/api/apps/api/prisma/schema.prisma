@@ -1,0 +1,171 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  ADMIN
+  STAFF
+}
+
+enum OrderSource {
+  AMAZON
+  FLIPKART
+  MEESHO
+  WEBSITE
+}
+
+enum OrderStatus {
+  PENDING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
+
+enum InventoryAction {
+  STOCK_IN
+  STOCK_OUT
+  RESERVED
+  RELEASED
+  DELIVERED
+  ADJUSTMENT
+}
+
+model Company {
+  id           String   @id @default(cuid())
+  name         String
+  slug         String   @unique
+  settings     Json     @default("{}")
+  branding     Json     @default("{}")
+  featureFlags Json     @default("{}")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  users        User[]
+  products     Product[]
+  orders       Order[]
+  inventoryLogs InventoryLog[]
+  integrations Integration[]
+
+  @@map("companies")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String
+  password  String
+  name      String
+  role      UserRole @default(STAFF)
+  companyId String   @map("company_id")
+  isActive  Boolean  @default(true) @map("is_active")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  company   Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  orders    Order[]
+
+  @@unique([email, companyId])
+  @@index([companyId])
+  @@map("users")
+}
+
+model Product {
+  id            String   @id @default(cuid())
+  sku           String
+  name          String
+  description   String?
+  price         Decimal  @default(0) @db.Decimal(12, 2)
+  costPrice     Decimal  @default(0) @map("cost_price") @db.Decimal(12, 2)
+  currentStock  Int      @default(0) @map("current_stock")
+  reservedStock Int      @default(0) @map("reserved_stock")
+  lowStockThreshold Int  @default(10) @map("low_stock_threshold")
+  imageUrl      String?  @map("image_url")
+  isActive      Boolean  @default(true) @map("is_active")
+  companyId     String   @map("company_id")
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  company       Company        @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  orders        Order[]
+  inventoryLogs InventoryLog[]
+
+  @@unique([sku, companyId])
+  @@index([companyId])
+  @@index([companyId, sku])
+  @@map("products")
+}
+
+model Order {
+  id              String      @id @default(cuid())
+  orderNumber     String      @map("order_number")
+  source          OrderSource
+  status          OrderStatus @default(PENDING)
+  externalOrderId String?     @map("external_order_id")
+  quantity        Int
+  unitPrice       Decimal     @default(0) @map("unit_price") @db.Decimal(12, 2)
+  totalPrice      Decimal     @default(0) @map("total_price") @db.Decimal(12, 2)
+  shippingDetails Json?       @map("shipping_details")
+  notes           String?
+  productId       String      @map("product_id")
+  companyId       String      @map("company_id")
+  assignedToId    String?     @map("assigned_to_id")
+  createdAt       DateTime    @default(now()) @map("created_at")
+  updatedAt       DateTime    @updatedAt @map("updated_at")
+
+  product         Product     @relation(fields: [productId], references: [id])
+  company         Company     @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  assignedTo      User?       @relation(fields: [assignedToId], references: [id])
+
+  @@unique([externalOrderId, source, companyId])
+  @@index([companyId])
+  @@index([companyId, status])
+  @@index([companyId, source])
+  @@map("orders")
+}
+
+model InventoryLog {
+  id        String          @id @default(cuid())
+  action    InventoryAction
+  quantity  Int
+  reason    String?
+  metadata  Json?
+  productId String          @map("product_id")
+  companyId String          @map("company_id")
+  orderId   String?         @map("order_id")
+  createdAt DateTime        @default(now()) @map("created_at")
+
+  product   Product         @relation(fields: [productId], references: [id])
+  company   Company         @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId])
+  @@index([productId])
+  @@index([companyId, productId])
+  @@index([companyId, createdAt])
+  @@map("inventory_logs")
+}
+
+model Integration {
+  id             String   @id @default(cuid())
+  platform       OrderSource
+  name           String
+  apiKey         String?  @map("api_key")
+  apiSecret      String?  @map("api_secret")
+  webhookSecret  String?  @map("webhook_secret")
+  endpoint       String?
+  isActive       Boolean  @default(true) @map("is_active")
+  lastSyncAt     DateTime? @map("last_sync_at")
+  settings       Json     @default("{}")
+  companyId      String   @map("company_id")
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+
+  company        Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@unique([platform, companyId])
+  @@index([companyId])
+  @@map("integrations")
+}

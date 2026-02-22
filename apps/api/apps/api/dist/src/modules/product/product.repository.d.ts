@@ -1,0 +1,130 @@
+import { Prisma } from '@prisma/client';
+export declare class ProductRepository {
+    findMany(companyId: string, options: {
+        page: number;
+        limit: number;
+        search?: string;
+        sortBy?: string;
+        sortOrder?: 'asc' | 'desc';
+    }): Promise<{
+        data: {
+            description: string | null;
+            name: string;
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            companyId: string;
+            isActive: boolean;
+            sku: string;
+            price: Prisma.Decimal;
+            costPrice: Prisma.Decimal;
+            currentStock: number;
+            reservedStock: number;
+            lowStockThreshold: number;
+            imageUrl: string | null;
+        }[];
+        total: number;
+        page: number;
+        limit: number;
+        totalPages: number;
+    }>;
+    findById(id: string, companyId: string): Promise<{
+        description: string | null;
+        name: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        companyId: string;
+        isActive: boolean;
+        sku: string;
+        price: Prisma.Decimal;
+        costPrice: Prisma.Decimal;
+        currentStock: number;
+        reservedStock: number;
+        lowStockThreshold: number;
+        imageUrl: string | null;
+    } | null>;
+    findBySku(sku: string, companyId: string): Promise<{
+        description: string | null;
+        name: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        companyId: string;
+        isActive: boolean;
+        sku: string;
+        price: Prisma.Decimal;
+        costPrice: Prisma.Decimal;
+        currentStock: number;
+        reservedStock: number;
+        lowStockThreshold: number;
+        imageUrl: string | null;
+    } | null>;
+    create(data: Prisma.ProductCreateInput): Promise<{
+        description: string | null;
+        name: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        companyId: string;
+        isActive: boolean;
+        sku: string;
+        price: Prisma.Decimal;
+        costPrice: Prisma.Decimal;
+        currentStock: number;
+        reservedStock: number;
+        lowStockThreshold: number;
+        imageUrl: string | null;
+    }>;
+    update(id: string, companyId: string, data: Prisma.ProductUpdateInput): Promise<{
+        description: string | null;
+        name: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        companyId: string;
+        isActive: boolean;
+        sku: string;
+        price: Prisma.Decimal;
+        costPrice: Prisma.Decimal;
+        currentStock: number;
+        reservedStock: number;
+        lowStockThreshold: number;
+        imageUrl: string | null;
+    }>;
+    delete(id: string, companyId: string): Promise<{
+        description: string | null;
+        name: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        companyId: string;
+        isActive: boolean;
+        sku: string;
+        price: Prisma.Decimal;
+        costPrice: Prisma.Decimal;
+        currentStock: number;
+        reservedStock: number;
+        lowStockThreshold: number;
+        imageUrl: string | null;
+    }>;
+    getLowStockProducts(companyId: string): Promise<{
+        description: string | null;
+        name: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        companyId: string;
+        isActive: boolean;
+        sku: string;
+        price: Prisma.Decimal;
+        costPrice: Prisma.Decimal;
+        currentStock: number;
+        reservedStock: number;
+        lowStockThreshold: number;
+        imageUrl: string | null;
+    }[]>;
+    countByCompany(companyId: string): Promise<number>;
+}
+export declare const productRepository: ProductRepository;
+//# sourceMappingURL=product.repository.d.ts.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"stock-sync.worker.d.ts","sourceRoot":"","sources":["../../../src/workers/stock-sync.worker.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAO,MAAM,QAAQ,CAAC;AAGrC,OAAO,KAAK,EAAE,YAAY,EAAE,MAAM,UAAU,CAAC;AAE7C,wBAAgB,oBAAoB,sCA8EnC"}

@@ -1,0 +1,177 @@
+2026-02-12 22:33:18:3318 [35mhttp[39m: [35mPOST /api/auth/register[39m [e19f26aa-22f3-45ee-95f7-0849ad42fa65]
+2026-02-12 22:33:18:3318 [35mhttp[39m: [35mPOST /api/auth/register 500 - 368ms[39m [e19f26aa-22f3-45ee-95f7-0849ad42fa65]
+2026-02-12 22:34:44:3444 [35mhttp[39m: [35mPOST /api/auth/register[39m [98002e21-2a49-4834-bba5-3f2b21681910]
+2026-02-12 22:34:45:3445 [31merror[39m: [31m[Error] [39m
+[31mInvalid `prisma.company.findUnique()` invocation in[39m
+[31mC:\Users\Vivek Kumar\Documents\Inventory software\apps\api\src\modules\auth\auth.service.ts:16:54[39m
+
+[31m  13     .replace(/[^a-z0-9]+/g, '-')[39m
+[31m  14     .replace(/(^-|-$)/g, '');[39m
+[31m  15 [39m
+[31m→ 16 const existingCompany = await prisma.company.findUnique([39m
+[31mAuthentication failed against database server, the provided database credentials for `postgres` are not valid.[39m
+
+[31mPlease make sure to provide valid database credentials for the database server at the configured address.[39m 
+2026-02-12 22:34:45:3445 [35mhttp[39m: [35mPOST /api/auth/register 500 - 326ms[39m [98002e21-2a49-4834-bba5-3f2b21681910]
+2026-02-13 14:27:58:2758 [35mhttp[39m: [35mHEAD /[39m [fbd367f2-6dfb-4a95-81cb-67ef41855bfd]
+2026-02-13 14:27:58:2758 [35mhttp[39m: [35mHEAD / 404 - 7ms[39m [fbd367f2-6dfb-4a95-81cb-67ef41855bfd]
+2026-02-13 14:27:58:2758 [35mhttp[39m: [35mGET /[39m [9ec80711-8ab3-4d0a-8b38-665d8f9b9a5b]
+2026-02-13 14:27:58:2758 [35mhttp[39m: [35mGET / 404 - 1ms[39m [9ec80711-8ab3-4d0a-8b38-665d8f9b9a5b]
+2026-02-13 14:28:14:2814 [35mhttp[39m: [35mHEAD /health[39m [b7dd20db-656d-421a-95b1-d871eaa75470]
+2026-02-13 14:28:14:2814 [35mhttp[39m: [35mHEAD /health 200 - 2ms[39m [b7dd20db-656d-421a-95b1-d871eaa75470]
+2026-02-13 14:28:14:2814 [35mhttp[39m: [35mGET /health[39m [7b116e21-682c-450c-b53e-82bd343b313e]
+2026-02-13 14:28:14:2814 [35mhttp[39m: [35mGET /health 200 - 1ms[39m [7b116e21-682c-450c-b53e-82bd343b313e]
+2026-02-13 14:29:52:2952 [35mhttp[39m: [35mGET /[39m [fd00629d-5425-4ab8-90a9-8985053b1dd2]
+2026-02-13 14:29:52:2952 [35mhttp[39m: [35mGET / 404 - 1ms[39m [fd00629d-5425-4ab8-90a9-8985053b1dd2]
+2026-02-13 14:33:01:331 [35mhttp[39m: [35mHEAD /health[39m [6ffd403d-6556-4efe-9246-6233b343f7b7]
+2026-02-13 14:33:01:331 [35mhttp[39m: [35mHEAD /health 200 - 5ms[39m [6ffd403d-6556-4efe-9246-6233b343f7b7]
+2026-02-13 14:33:01:331 [35mhttp[39m: [35mGET /health[39m [f5209487-fb63-4ad7-b308-0caae88aeba4]
+2026-02-13 14:33:01:331 [35mhttp[39m: [35mGET /health 200 - 1ms[39m [f5209487-fb63-4ad7-b308-0caae88aeba4]
+2026-02-13 14:38:18:3818 [35mhttp[39m: [35mHEAD /health[39m [4094e286-b213-4401-924b-db3af4f278cc]
+2026-02-13 14:38:18:3818 [35mhttp[39m: [35mHEAD /health 200 - 10ms[39m [4094e286-b213-4401-924b-db3af4f278cc]
+2026-02-13 14:38:18:3818 [35mhttp[39m: [35mGET /health[39m [9c8c3b4a-26ae-4de0-a904-571aa6261ad4]
+2026-02-13 14:38:18:3818 [35mhttp[39m: [35mGET /health 200 - 3ms[39m [9c8c3b4a-26ae-4de0-a904-571aa6261ad4]
+2026-02-13 14:38:26:3826 [35mhttp[39m: [35mGET /[39m [057bdc0a-2d25-47bc-9ec6-6f401b1d21af]
+2026-02-13 14:38:26:3826 [35mhttp[39m: [35mGET / 404 - 5ms[39m [057bdc0a-2d25-47bc-9ec6-6f401b1d21af]
+2026-02-13 14:57:02:572 [35mhttp[39m: [35mHEAD /health[39m [0f6122c4-6f46-4271-a8aa-3b4ecab65f7d]
+2026-02-13 14:57:03:573 [35mhttp[39m: [35mHEAD /health 200 - 75ms[39m [0f6122c4-6f46-4271-a8aa-3b4ecab65f7d]
+2026-02-13 14:57:03:573 [35mhttp[39m: [35mGET /health[39m [e837c47b-b469-4468-88ab-8f3ab2f17ac7]
+2026-02-13 14:57:03:573 [35mhttp[39m: [35mGET /health 200 - 2ms[39m [e837c47b-b469-4468-88ab-8f3ab2f17ac7]
+2026-02-13 14:59:51:5951 [35mhttp[39m: [35mPOST /api/auth/login[39m [2acd6027-03f2-4afe-85a5-f7e1d48b3fb4]
+2026-02-13 15:00:00:00 [31merror[39m: [31m[Error] [39m
+[31mInvalid `prisma.company.findUnique()` invocation in[39m
+[31mC:\Users\Vivek Kumar\Documents\Inventory software\apps\api\src\modules\auth\auth.service.ts:63:46[39m
+
+[31m  60 }[39m
+[31m  61 [39m
+[31m  62 async login(input: LoginInput) {[39m
+[31m→ 63     const company = await prisma.company.findUnique([39m
+[31mCan't reach database server at `localhost:5432`[39m
+
+[31mPlease make sure your database server is running at `localhost:5432`.[39m 
+2026-02-13 15:00:00:00 [35mhttp[39m: [35mPOST /api/auth/login 500 - 9310ms[39m [2acd6027-03f2-4afe-85a5-f7e1d48b3fb4]
+2026-02-13 15:13:10:1310 [35mhttp[39m: [35mPOST /api/auth/login[39m [9d81dfcb-6cb2-4e26-8bbc-eefda4f2e820]
+2026-02-13 15:13:12:1312 [31merror[39m: [31m[Error] [39m
+[31mInvalid `prisma.company.findUnique()` invocation in[39m
+[31mC:\Users\Vivek Kumar\Documents\Inventory software\apps\api\src\modules\auth\auth.service.ts:63:46[39m
+
+[31m  60 }[39m
+[31m  61 [39m
+[31m  62 async login(input: LoginInput) {[39m
+[31m→ 63     const company = await prisma.company.findUnique([39m
+[31mAuthentication failed against database server, the provided database credentials for `postgres` are not valid.[39m
+
+[31mPlease make sure to provide valid database credentials for the database server at the configured address.[39m 
+2026-02-13 15:13:12:1312 [35mhttp[39m: [35mPOST /api/auth/login 500 - 1773ms[39m [9d81dfcb-6cb2-4e26-8bbc-eefda4f2e820]
+2026-02-13 15:13:19:1319 [35mhttp[39m: [35mPOST /api/auth/login[39m [bdf71cc7-adf6-4f8d-ba42-cbe91248bf34]
+2026-02-13 15:13:19:1319 [31merror[39m: [31m[Error] [39m
+[31mInvalid `prisma.company.findUnique()` invocation in[39m
+[31mC:\Users\Vivek Kumar\Documents\Inventory software\apps\api\src\modules\auth\auth.service.ts:63:46[39m
+
+[31m  60 }[39m
+[31m  61 [39m
+[31m  62 async login(input: LoginInput) {[39m
+[31m→ 63     const company = await prisma.company.findUnique([39m
+[31mAuthentication failed against database server, the provided database credentials for `postgres` are not valid.[39m
+
+[31mPlease make sure to provide valid database credentials for the database server at the configured address.[39m 
+2026-02-13 15:13:19:1319 [35mhttp[39m: [35mPOST /api/auth/login 500 - 112ms[39m [bdf71cc7-adf6-4f8d-ba42-cbe91248bf34]
+2026-02-13 15:13:20:1320 [35mhttp[39m: [35mPOST /api/auth/login[39m [feaca021-db4e-4d26-b9be-eb77097f7f62]
+2026-02-13 15:13:20:1320 [31merror[39m: [31m[Error] [39m
+[31mInvalid `prisma.company.findUnique()` invocation in[39m
+[31mC:\Users\Vivek Kumar\Documents\Inventory software\apps\api\src\modules\auth\auth.service.ts:63:46[39m
+
+[31m  60 }[39m
+[31m  61 [39m
+[31m  62 async login(input: LoginInput) {[39m
+[31m→ 63     const company = await prisma.company.findUnique([39m
+[31mAuthentication failed against database server, the provided database credentials for `postgres` are not valid.[39m
+
+[31mPlease make sure to provide valid database credentials for the database server at the configured address.[39m 
+2026-02-13 15:13:20:1320 [35mhttp[39m: [35mPOST /api/auth/login 500 - 108ms[39m [feaca021-db4e-4d26-b9be-eb77097f7f62]
+2026-02-13 15:13:20:1320 [35mhttp[39m: [35mPOST /api/auth/login[39m [95a499f9-c2b3-4348-a6d2-20058b1ad314]
+2026-02-13 15:13:21:1321 [31merror[39m: [31m[Error] [39m
+[31mInvalid `prisma.company.findUnique()` invocation in[39m
+[31mC:\Users\Vivek Kumar\Documents\Inventory software\apps\api\src\modules\auth\auth.service.ts:63:46[39m
+
+[31m  60 }[39m
+[31m  61 [39m
+[31m  62 async login(input: LoginInput) {[39m
+[31m→ 63     const company = await prisma.company.findUnique([39m
+[31mAuthentication failed against database server, the provided database credentials for `postgres` are not valid.[39m
+
+[31mPlease make sure to provide valid database credentials for the database server at the configured address.[39m 
+2026-02-13 15:13:21:1321 [35mhttp[39m: [35mPOST /api/auth/login 500 - 110ms[39m [95a499f9-c2b3-4348-a6d2-20058b1ad314]
+2026-02-14 00:47:20:4720 [35mhttp[39m: [35mPOST /api/auth/login[39m [cb71cb49-4d93-4e1e-9848-203587743e5f]
+2026-02-14 00:47:25:4725 [31merror[39m: [31m[Error] [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Users\Vivek Kumar\Documents\Inventory software\apps\api\src\modules\auth\auth.service.ts:86:45[39m
+
+[31m  83     });[39m
+[31m  84 } else {[39m
+[31m  85     // Login by email only[39m
+[31m→ 86     const users = await prisma.user.findMany([39m
+[31mCan't reach database server at `localhost:5432`[39m
+
+[31mPlease make sure your database server is running at `localhost:5432`.[39m 
+2026-02-14 00:47:25:4725 [35mhttp[39m: [35mPOST /api/auth/login 500 - 5189ms[39m [cb71cb49-4d93-4e1e-9848-203587743e5f]
+2026-02-15 12:11:14:1114 [35mhttp[39m: [35mPOST /api/auth/login[39m [d93ff988-48be-44bb-b6af-85aa2606cc69]
+2026-02-15 12:11:14:1114 [31merror[39m: [31m[Error] [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Users\Vivek Kumar\Documents\Inventory software\apps\api\src\modules\auth\auth.service.ts:86:45[39m
+
+[31m  83     });[39m
+[31m  84 } else {[39m
+[31m  85     // Login by email only[39m
+[31m→ 86     const users = await prisma.user.findMany([39m
+[31mAuthentication failed against database server, the provided database credentials for `postgres` are not valid.[39m
+
+[31mPlease make sure to provide valid database credentials for the database server at the configured address.[39m 
+2026-02-15 12:11:14:1114 [35mhttp[39m: [35mPOST /api/auth/login 500 - 252ms[39m [d93ff988-48be-44bb-b6af-85aa2606cc69]
+2026-02-17 00:57:07:577 [35mhttp[39m: [35mPOST /api/auth/login[39m [5cdc491f-ff0d-4949-90d5-5b0cdd7fe56f]
+2026-02-17 00:57:08:578 [35mhttp[39m: [35mPOST /login 200 - 1048ms[39m [5cdc491f-ff0d-4949-90d5-5b0cdd7fe56f]
+2026-02-17 00:57:12:5712 [35mhttp[39m: [35mPOST /api/auth/login[39m [c535cf8a-0aa2-4cc6-a9e7-0fa045171881]
+2026-02-17 00:57:13:5713 [35mhttp[39m: [35mPOST /login 200 - 1089ms[39m [c535cf8a-0aa2-4cc6-a9e7-0fa045171881]
+2026-02-17 00:57:24:5724 [35mhttp[39m: [35mPOST /api/auth/login[39m [04a76728-62bd-41d7-8cd9-0ce366662a38]
+2026-02-17 00:57:25:5725 [35mhttp[39m: [35mPOST /login 200 - 985ms[39m [04a76728-62bd-41d7-8cd9-0ce366662a38]
+2026-02-17 00:57:28:5728 [35mhttp[39m: [35mPOST /api/auth/login[39m [d7b4422b-e0ad-4a5e-b2bc-ba68d3aa41c8]
+2026-02-17 00:57:29:5729 [35mhttp[39m: [35mPOST /login 200 - 993ms[39m [d7b4422b-e0ad-4a5e-b2bc-ba68d3aa41c8]
+2026-02-17 00:57:29:5729 [35mhttp[39m: [35mGET /api/auth/me[39m [32ee227e-4381-4d14-884a-dcd056ec43e2]
+2026-02-17 00:57:29:5729 [35mhttp[39m: [35mGET /me 200 - 56ms[39m [32ee227e-4381-4d14-884a-dcd056ec43e2]
+2026-02-17 01:20:06:206 [35mhttp[39m: [35mGET /api/auth/me[39m [fd765bfb-f06a-4724-a45b-f84b71debb56]
+2026-02-17 01:20:09:209 [35mhttp[39m: [35mGET /me 304 - 2149ms[39m [fd765bfb-f06a-4724-a45b-f84b71debb56]
+2026-02-17 01:34:21:3421 [35mhttp[39m: [35mGET /api/auth/me[39m [54ab4fe2-0b44-43ca-ad07-5fa31784c37d]
+2026-02-17 01:34:23:3423 [35mhttp[39m: [35mGET /me 304 - 1441ms[39m [54ab4fe2-0b44-43ca-ad07-5fa31784c37d]
+2026-02-17 01:43:00:430 [35mhttp[39m: [35mGET /api/auth/me[39m [143b0357-3150-4412-8079-3a1d20606f66]
+2026-02-17 01:43:05:435 [35mhttp[39m: [35mGET /me 304 - 4141ms[39m [143b0357-3150-4412-8079-3a1d20606f66]
+2026-02-17 01:57:06:576 [35mhttp[39m: [35mGET /api/auth/me[39m [70978ac5-dd57-4862-bba9-cdb7aa573b5f]
+2026-02-17 01:57:07:577 [35mhttp[39m: [35mGET /me 304 - 1601ms[39m [70978ac5-dd57-4862-bba9-cdb7aa573b5f]
+2026-02-17 01:57:17:5717 [35mhttp[39m: [35mGET /api/auth/me[39m [e04ffb38-45dd-44c7-b4b4-0da1fd8869b1]
+2026-02-17 01:57:18:5718 [35mhttp[39m: [35mGET /me 304 - 669ms[39m [e04ffb38-45dd-44c7-b4b4-0da1fd8869b1]
+2026-02-17 01:58:23:5823 [35mhttp[39m: [35mGET /api/auth/me[39m [662b41e2-d112-4397-a56d-b25a6fbca0a5]
+2026-02-17 01:58:23:5823 [35mhttp[39m: [35mGET /me 304 - 319ms[39m [662b41e2-d112-4397-a56d-b25a6fbca0a5]
+2026-02-17 02:01:08:18 [35mhttp[39m: [35mGET /api/auth/me[39m [6d70575a-2d24-419e-adc1-834546810437]
+2026-02-17 02:01:08:18 [35mhttp[39m: [35mGET /me 304 - 74ms[39m [6d70575a-2d24-419e-adc1-834546810437]
+2026-02-17 02:13:41:1341 [35mhttp[39m: [35mGET /api/auth/me[39m [d34ea556-8d2b-4a9a-9208-aeaead1e8a12]
+2026-02-17 02:13:43:1343 [35mhttp[39m: [35mGET /me 304 - 1708ms[39m [d34ea556-8d2b-4a9a-9208-aeaead1e8a12]
+2026-02-17 02:16:28:1628 [35mhttp[39m: [35mGET /api/auth/me[39m [f5859669-bbf1-4c2b-b571-175793e33e51]
+2026-02-17 02:16:29:1629 [35mhttp[39m: [35mGET /me 304 - 137ms[39m [f5859669-bbf1-4c2b-b571-175793e33e51]
+2026-02-17 02:18:23:1823 [35mhttp[39m: [35mPOST /api/auth/login[39m [4157e612-030d-423c-8f33-95efad895973]
+2026-02-17 02:18:23:1823 [35mhttp[39m: [35mPOST /login 200 - 934ms[39m [4157e612-030d-423c-8f33-95efad895973]
+2026-02-17 02:18:30:1830 [35mhttp[39m: [35mGET /api/auth/me[39m [b8583451-ab6b-4506-8631-8ace87308377]
+2026-02-17 02:18:30:1830 [35mhttp[39m: [35mGET /me 304 - 56ms[39m [b8583451-ab6b-4506-8631-8ace87308377]
+2026-02-17 02:24:41:2441 [35mhttp[39m: [35mGET /api/auth/me[39m [a22fd435-3443-4dac-a0cf-fb5543503707]
+2026-02-17 02:24:42:2442 [35mhttp[39m: [35mGET /me 304 - 895ms[39m [a22fd435-3443-4dac-a0cf-fb5543503707]
+2026-02-22 10:38:35:3835 [35mhttp[39m: [35mPOST /api/auth/login[39m [aacf31de-daf2-4c2c-a65c-bf7c9c1da817]
+2026-02-22 10:38:37:3837 [31merror[39m: [31m[Error] [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Users\uttim\Downloads\Inventory software\apps\api\src\modules\auth\auth.service.ts:86:45[39m
+
+[31m  83     });[39m
+[31m  84 } else {[39m
+[31m  85     // Login by email only[39m
+[31m→ 86     const users = await prisma.user.findMany([39m
+[31mCan't reach database server at `127.0.0.1:5434`[39m
+
+[31mPlease make sure your database server is running at `127.0.0.1:5434`.[39m 
+2026-02-22 10:38:37:3837 [35mhttp[39m: [35mPOST /api/auth/login 500 - 2171ms[39m [aacf31de-daf2-4c2c-a65c-bf7c9c1da817]
